@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang=""><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FFmpeg - 爱学习的好孩子</title>
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="爱学习的好孩子">
+  <link rel="alternate" href="/feed.json" type="application/json" title="爱学习的好孩子">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="canonical" href="http://localhost/archive/ffmpeg/">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css"><link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <script src="/js/main.js" type="module"></script>
+  
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="爱学习的好孩子">
+<meta property="og:description" content="活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。">
+<meta property="og:url" content="http://localhost/archive/ffmpeg/">
+<meta name="twitter:card" content="summary">
+<meta name="description" content="活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。">
+<script type="text/javascript" src="/pagefind/pagefind-ui.js"></script><script type="text/javascript">window.addEventListener('DOMContentLoaded',()=>{new PagefindUI({"element":"#search","showImages":false,"excerptLength":0,"showEmptyFilters":true,"showSubResults":false,"resetStyles":true,"bundlePath":"/pagefind/","baseUrl":"/"});});</script></head>
+
+<body class="container mx-auto body-font">
+  <header class="flex flex-wrap p-5 flex-col md:flex-row items-center text-gray-600">
+    <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewbox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">爱学习的好孩子</span>
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+      
+      
+      
+      
+      <a href="/deno/" class="mr-5 hover:text-gray-900">
+        Deno
+      </a>
+      
+      
+      
+      <a href="/sword/" class="mr-5 hover:text-gray-900">
+        Sword
+      </a>
+      
+      
+      
+      <a href="/linux/" class="mr-5 hover:text-gray-900">
+        Linux
+      </a>
+      
+      
+      <a href="/archive/" class="mr-5 hover:text-gray-900">Archive</a>
+      <a href="/contact/" class="mr-5 hover:text-gray-900">Contact</a>
+    </nav>
+  </header>  
+
+  <div class="search my-3" id="search"></div>
+
+  <div class="grid grid-cols-6">
+  <div class="col-span-1">
+    <nav class="sidebar">
+      
+    </nav>
+
+  </div>
+  <div class="col-span-5">
+    <article class="bg-white py-4 sm:py-8">
+      <div class="mx-auto max-w-5xl px-3 lg:px-4">
+        <article data-title="FFmpeg" data-pagefind-index-attrs="data-title">
+          <div class="text-center border-solid border-zinc-300 border-b-2 pb-3 mt-1 mb-10">
+            <p class="leading-16 text-4xl font-black tracking-normal title-font mb-3">FFmpeg</p>
+            <p>时间: 2024-06-13</p>
+          </div>
+
+          <div class="prose prose-2xl prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-inline-code:rounded-md prose-inline-code:border prose-inline-code:text-2xl prose-inline-code:bg-slate-200 prose-inline-code:px-2 prose-table:border prose-td:border prose-td:px-4 prose-th:pt-3 prose-th:border prose-th:font-black prose-th:text-gray-950 prose-table-tr:bg-green-50 
+
+          prose-headings:text-emerald-700 prose-strong:text-gray-600 prose-em:text-gray-600 prose-p:text-gray-600  hover:prose-a:text-emerald-900 prose-li:text-gray-600 prose-ul:list-inside prose-ol:list-inside prose-li:marker:text-emerald-700 prose-blockquote:bg-gray-100 prose-blockquote:pl-4 prose-blockquote:py-2 prose-blockquote:text-gray-500 prose-blockquote:border-emerald-500 prose-img:w-full prose-img:border prose-img:p-1
+
+          ">
+            <h1>提取视频中的音频</h1>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 提取完整音频</span>
+ffmpeg <span class="token parameter variable">-i</span> sample.mp4 sample.mp3
+
+<span class="token comment"># 提取指定时间段的音频</span>
+<span class="token comment"># ss指定开始时间戳，t指定编码持续时间</span>
+ffmpeg <span class="token parameter variable">-i</span> sample.mp4 <span class="token parameter variable">-ss</span> 00:03:05 <span class="token parameter variable">-t</span> 00:00:45.0 <span class="token parameter variable">-q:a</span> <span class="token number">0</span> <span class="token parameter variable">-map</span> a sample.mp3
+
+<span class="token comment"># 重新编码</span>
+ffmpeg <span class="token parameter variable">-i</span> input-video.avi <span class="token parameter variable">-vn</span> <span class="token parameter variable">-acodec</span> copy output-audio.aac
+</code></pre>
+<h1>评论</h1>
+            
+          </div>
+        </article>
+
+        <!-- comment by utteranc -->
+        <script src="https://utteranc.es/client.js" repo="iStudyMen/istudymen.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+        </script>
+
+        <nav class="page-pagination pagination my-5">
+          <ul>
+            <li class="pagination-prev">
+              <a href="/archive/fetch/" rel="prev">
+                <span>上一篇：</span>
+                <strong>Fetch</strong>
+              </a>
+            </li>
+            
+            <li class="pagination-next">
+              <a href="/archive/linuxzhongduantabbuquantishihuluedaxiaoxie/" rel="next">
+                <span>下一篇：</span>
+                <strong>Linux终端Tab补全提示忽略大小写</strong>
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </article>
+  </div>
+</div>
+
+
+
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-4 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewbox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">爱学习的好孩子</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500">活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">WebSites</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://dash.deno.com/login?redirect=/" title="Deno云官网" class="text-gray-600 hover:text-gray-800">Deno Deploy</a>
+            </li>
+            
+            <li>
+              <a href="https://github.com/" title="全球最大基友交流社区" class="text-gray-600 hover:text-gray-800">Github</a>
+            </li>
+            
+            <li>
+              <a href="https://supabase.com/" title="非常好的一款免费大象数据库" class="text-gray-600 hover:text-gray-800">Supabase</a>
+            </li>
+            
+            <li>
+              <a href="https://www.cpolar.com/" title="不错的内网穿透工具" class="text-gray-600 hover:text-gray-800">Cpolar</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">Docs</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://deno.com/" title="Deno官网" class="text-gray-600 hover:text-gray-800">Deno</a>
+            </li>
+            
+            <li>
+              <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" title="JavaScript最好的学习网站" class="text-gray-600 hover:text-gray-800">MDN</a>
+            </li>
+            
+            <li>
+              <a href="https://www.tslang.cn/docs/home.html" title="TypeScript学习网站" class="text-gray-600 hover:text-gray-800">TypeScript</a>
+            </li>
+            
+            <li>
+              <a href="https://lume.land/" title="本博客使用的库" class="text-gray-600 hover:text-gray-800">Lume</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">iPhone</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://sickw.com/" title="iPhone信息查询" class="text-gray-600 hover:text-gray-800">Sickw</a>
+            </li>
+            
+            <li>
+              <a href="https://www.att.com/deviceunlock/unlockstep1" title="ATT官方免费解锁" class="text-gray-600 hover:text-gray-800">ATT.com</a>
+            </li>
+            
+            <li>
+              <a href="http://iccid.online" title="最新的Iccid查询" class="text-gray-600 hover:text-gray-800">Iccid</a>
+            </li>
+            
+            <li>
+              <a href="https://tools.fun/" title="各类常用编码解码等工具" class="text-gray-600 hover:text-gray-800">Tools.fun</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">Tools</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://sms.sellaite.com/" title="免费接收国外验证码的平台" class="text-gray-600 hover:text-gray-800">SMS</a>
+            </li>
+            
+            <li>
+              <a href="https://mp3cut.net/cn/" title="音视频、PDF工具箱" class="text-gray-600 hover:text-gray-800">123APPS</a>
+            </li>
+            
+            <li>
+              <a href="https://convertio.co/zh/ocr/" title="文件格式转换" class="text-gray-600 hover:text-gray-800">Convertio</a>
+            </li>
+            
+            <li>
+              <a href="https://www.remove.bg/zh/" title="智能抠图网站" class="text-gray-600 hover:text-gray-800">Remove.Bg</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+    <div class="bg-gray-100">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-500 text-sm text-center sm:text-left">Copyright © 2018-2022 —
+          <a href="https://github.com/istudymen" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@ 大道至简</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewbox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body></html>

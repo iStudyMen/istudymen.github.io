@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang=""><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>git - 爱学习的好孩子</title>
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+  <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="爱学习的好孩子">
+  <link rel="alternate" href="/feed.json" type="application/json" title="爱学习的好孩子">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="canonical" href="http://localhost/sword/git/">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css"><link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <script src="/js/main.js" type="module"></script>
+  
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="爱学习的好孩子">
+<meta property="og:description" content="活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。">
+<meta property="og:url" content="http://localhost/sword/git/">
+<meta name="twitter:card" content="summary">
+<meta name="description" content="活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。">
+<script type="text/javascript" src="/pagefind/pagefind-ui.js"></script><script type="text/javascript">window.addEventListener('DOMContentLoaded',()=>{new PagefindUI({"element":"#search","showImages":false,"excerptLength":0,"showEmptyFilters":true,"showSubResults":false,"resetStyles":true,"bundlePath":"/pagefind/","baseUrl":"/"});});</script></head>
+
+<body class="container mx-auto body-font">
+  <header class="flex flex-wrap p-5 flex-col md:flex-row items-center text-gray-600">
+    <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewbox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">爱学习的好孩子</span>
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+      
+      
+      
+      
+      <a href="/deno/" class="mr-5 hover:text-gray-900">
+        Deno
+      </a>
+      
+      
+      
+      <a href="/sword/" class="mr-5 hover:text-gray-900">
+        Sword
+      </a>
+      
+      
+      
+      <a href="/linux/" class="mr-5 hover:text-gray-900">
+        Linux
+      </a>
+      
+      
+      <a href="/archive/" class="mr-5 hover:text-gray-900">Archive</a>
+      <a href="/contact/" class="mr-5 hover:text-gray-900">Contact</a>
+    </nav>
+  </header>  
+
+  <div class="search my-3" id="search"></div>
+
+  <div class="grid grid-cols-6">
+  <div class="col-span-1">
+    <nav class="sidebar">
+      
+    </nav>
+
+  </div>
+  <div class="col-span-5">
+    <article class="bg-white py-4 sm:py-8">
+      <div class="mx-auto max-w-5xl px-3 lg:px-4">
+        <article data-title="git" data-pagefind-index-attrs="data-title">
+          <div class="text-center border-solid border-zinc-300 border-b-2 pb-3 mt-1 mb-10">
+            <p class="leading-16 text-4xl font-black tracking-normal title-font mb-3">git</p>
+            <p>时间: 2024-06-09</p>
+          </div>
+
+          <div class="prose prose-2xl prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-inline-code:rounded-md prose-inline-code:border prose-inline-code:text-2xl prose-inline-code:bg-slate-200 prose-inline-code:px-2 prose-table:border prose-td:border prose-td:px-4 prose-th:pt-3 prose-th:border prose-th:font-black prose-th:text-gray-950 prose-table-tr:bg-green-50 
+
+          prose-headings:text-emerald-700 prose-strong:text-gray-600 prose-em:text-gray-600 prose-p:text-gray-600  hover:prose-a:text-emerald-900 prose-li:text-gray-600 prose-ul:list-inside prose-ol:list-inside prose-li:marker:text-emerald-700 prose-blockquote:bg-gray-100 prose-blockquote:pl-4 prose-blockquote:py-2 prose-blockquote:text-gray-500 prose-blockquote:border-emerald-500 prose-img:w-full prose-img:border prose-img:p-1
+
+          ">
+            <h1>简介</h1>
+<p>目前进入<a href="https://git-scm.com/download/win">安装页面</a>。</p>
+<p>如果要修改<code>Git Bash</code>的默认用户根目录，只需要在用户<code>环境变量</code>部分新建<code>Home</code>变量，值为新的目录路径即可。</p>
+<h2>语法</h2>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token function">git</span> <span class="token punctuation">[</span>-v <span class="token operator">|</span> --version<span class="token punctuation">]</span> <span class="token punctuation">[</span>-h <span class="token operator">|</span> --help<span class="token punctuation">]</span> <span class="token punctuation">[</span>-C <span class="token operator">&lt;</span>path<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-c <span class="token operator">&lt;</span>name<span class="token operator">&gt;=</span><span class="token operator">&lt;</span>value<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--exec-path<span class="token punctuation">[</span><span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--html-path<span class="token punctuation">]</span> <span class="token punctuation">[</span>--man-path<span class="token punctuation">]</span> <span class="token punctuation">[</span>--info-path<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>-p <span class="token operator">|</span> <span class="token parameter variable">--paginate</span> <span class="token operator">|</span> <span class="token parameter variable">-P</span> <span class="token operator">|</span> --no-pager<span class="token punctuation">]</span> <span class="token punctuation">[</span>--no-replace-objects<span class="token punctuation">]</span> <span class="token punctuation">[</span>--bare<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--git-dir<span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--work-tree<span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--namespace<span class="token operator">=</span><span class="token operator">&lt;</span>name<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>--super-prefix<span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>--config-env<span class="token operator">=</span><span class="token operator">&lt;</span>name<span class="token operator">&gt;=</span><span class="token operator">&lt;</span>envvar<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+    <span class="token operator">&lt;</span>command<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>args<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+</code></pre>
+<h2>command说明</h2>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clone</td>
+<td>将存储库克隆到新目录中</td>
+</tr>
+<tr>
+<td>init</td>
+<td>初始化Git仓库</td>
+</tr>
+<tr>
+<td>add</td>
+<td>将文件内容添加到索引</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>移动或重命名文件，目录或符号链接</td>
+</tr>
+<tr>
+<td>restore</td>
+<td>Restore working tree files</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>从工作区和索引中删除文件</td>
+</tr>
+<tr>
+<td>bisect</td>
+<td>通过二进制查找引入错误的更改</td>
+</tr>
+<tr>
+<td>diff</td>
+<td>显示提交，提交和工作树等之间的更改</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>打印匹配图案的行</td>
+</tr>
+<tr>
+<td>log</td>
+<td>显示提交日志</td>
+</tr>
+<tr>
+<td>show</td>
+<td>显示各种类型的对象</td>
+</tr>
+<tr>
+<td>status</td>
+<td>显示工作树状态</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>列出，创建或删除分支</td>
+</tr>
+<tr>
+<td>commit</td>
+<td>将更改记录到存储库</td>
+</tr>
+<tr>
+<td>merge</td>
+<td>加入两个或更多的开发历史</td>
+</tr>
+<tr>
+<td><code>rebase</code></td>
+<td>转发端口本地提交到更新的上游头</td>
+</tr>
+<tr>
+<td><code>reset</code></td>
+<td>将当前HEAD复位到指定状态</td>
+</tr>
+<tr>
+<td>switch</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>创建，列出，删除或验证使用GPG签名的标签对象</td>
+</tr>
+<tr>
+<td>fetch</td>
+<td>从另一个存储库下载对象和引用</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>从另一个存储库或本地分支获取并合并</td>
+</tr>
+<tr>
+<td>push</td>
+<td>更新远程引用以及相关对象</td>
+</tr>
+</tbody>
+</table>
+<h1>基础入门</h1>
+<h2>从零开始</h2>
+<p>我们在<code>F盘</code>新建一个<code>gitTest</code>目录，后续操作都针对此目录，在目录下输入以下命令：</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 查看git状态</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git status  </span>
+fatal: not a <span class="token function">git</span> repository <span class="token punctuation">(</span>or any of the parent directories<span class="token punctuation">)</span>: .git
+
+<span class="token comment"># 初始化仓库</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git init</span>
+Initialized empty Git repository <span class="token keyword">in</span> F:/git/.git/
+</code></pre>
+<p><code>Git</code>会在当前目录创建一个空的仓库，建立一个<code>.git</code>的目录。</p>
+<div class="markdown-alert markdown-alert-caution">
+<p class="markdown-alert-title">Caution</p>
+<p>这个目录是<code>Git</code>用来跟踪管理版本库的，不要手动修改这个目录里面的文件。</p>
+<p>如果你是<code>Windows</code>系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）<code>不包含中文</code>。</p>
+</div>
+<p>在将文件加入版本库之前，我们需要了解<code>Git</code>管理本地数据的基本概念，大概可以分为三个区：</p>
+<ul>
+<li><code>工作区</code>(Working Directory), 就是你平时存放项目代码的地方。</li>
+<li><code>暂存区</code>(Stage/Index), 用于临时存放你的改动，事实上它只是一个文件，保存即将提交到的文件列表信息, 一般存放在<code>.git</code>目录下的<code>index</code>文件中，所以也把暂存区叫作<code>索引</code>。</li>
+<li><code>资源库</code>(Repository或Git Directory), 就是安全存放数据的位置，这里面有你提交到所有版本的数据, 其中HEAD指向最新放入仓库的版本。</li>
+</ul>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 新建test.txt</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># echo Hello World &gt; test.txt</span>
+
+<span class="token comment"># 查看git状态</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git status</span>
+On branch main
+No commits yet
+Untracked files:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file&gt;..."</span> to include <span class="token keyword">in</span> what will be committed<span class="token punctuation">)</span>
+        test.txt
+nothing added to commit but untracked files present <span class="token punctuation">(</span>use <span class="token string">"git add"</span> to track<span class="token punctuation">)</span>
+
+<span class="token comment"># 把文件添加到暂存区</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git add test.txt</span>
+
+<span class="token comment"># 将文件提交到仓库</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git commit -m first</span>
+<span class="token punctuation">[</span>main <span class="token punctuation">(</span>root-commit<span class="token punctuation">)</span> c2ed7f9<span class="token punctuation">]</span> first
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+ create mode <span class="token number">100644</span> test.txt
+
+<span class="token comment"># 查看版本</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git log</span>
+commit c2ed7f968a3542a0ab8f2dcb63a3f9b6dc152142 <span class="token punctuation">(</span>HEAD -<span class="token operator">&gt;</span> main<span class="token punctuation">)</span>
+Author: Adong <span class="token operator">&lt;</span><span class="token number">888888</span>@qq.com<span class="token operator">&gt;</span>
+Date:   Mon Oct <span class="token number">17</span> <span class="token number">20</span>:02:32 <span class="token number">2022</span> +0800
+    first
+</code></pre>
+<blockquote>
+<p>如果要添加多个文件，可以使用<code>git add .</code>来添加当前目录下全部的文件！</p>
+</blockquote>
+<p>下面我们继续。</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 新建second.txt</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># echo I am jack. &gt; second.txt</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git add .</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git status</span>
+On branch main
+Changes to be committed:
+  <span class="token punctuation">(</span>use <span class="token string">"git restore --staged &lt;file&gt;..."</span> to unstage<span class="token punctuation">)</span>
+        new file:   second.txt
+
+<span class="token comment"># 把second.txt从暂存区域移除</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git rm --cached second.txt</span>
+
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git status</span>
+On branch main
+Untracked files:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file&gt;..."</span> to include <span class="token keyword">in</span> what will be committed<span class="token punctuation">)</span>
+        second.txt
+nothing added to commit but untracked files present <span class="token punctuation">(</span>use <span class="token string">"git add"</span> to track<span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git add .</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git commit -m v2.0</span>
+On branch main
+nothing to commit, working tree clean
+
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git log</span>
+commit 0f220db755498a0ab3a504ccbf731e279ad259cd <span class="token punctuation">(</span>HEAD -<span class="token operator">&gt;</span> main<span class="token punctuation">)</span>
+Author: Adong <span class="token operator">&lt;</span><span class="token number">888888</span>@qq.com<span class="token operator">&gt;</span>
+Date:   Mon Oct <span class="token number">17</span> <span class="token number">20</span>:15:38 <span class="token number">2022</span> +0800
+
+    v2.0
+
+commit c2ed7f968a3542a0ab8f2dcb63a3f9b6dc152142
+Author: Adong <span class="token operator">&lt;</span><span class="token number">888888</span>@qq.com<span class="token operator">&gt;</span>
+Date:   Mon Oct <span class="token number">17</span> <span class="token number">20</span>:02:32 <span class="token number">2022</span> +0800
+
+    first
+</code></pre>
+<h2>进阶</h2>
+<h3>使用reset和checkout撤销对文件的修改</h3>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># echo What a shit do. &gt; second.txt</span>
+</code></pre>
+<p>现在我们修改了<code>second.txt</code>。假设我们在对代码进行了大量修改，突然发现程序无法运行了，但是自己早就不记得具体修改了哪些地方，这个时候想要回到上一次<code>commit</code>时的状态，怎么办呢？这时分为两种情况：</p>
+<p>（1）在工作区修改，但并未提交到暂存区（即并没有add），这和我们当前的情况一样。</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git checkout -- second.txt</span>
+Updated <span class="token number">1</span> path from the index
+</code></pre>
+<blockquote>
+<p>若想撤销工作区中所有文件的修改，则使用<code>git checkout -- .</code>。</p>
+</blockquote>
+<p>（2）工作区修改了之后，提交到了暂存区（已经add），如何撤销修改？这里又分为两种情况。</p>
+<p>我们首先运行下面命令：</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># echo What a shit do. &gt; second.txt</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git add .</span>
+</code></pre>
+<p>①如果你已经有了<code>commit</code>的记录，也就是我们现在的情况。</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 首先让second.txt回到工作区的状态</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git reset HEAD second.txt</span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git checkout -- second.txt</span>
+</code></pre>
+<p>②对于该文件来说，在当前分支上，你还没有commit过一次。坦白说，那就无能为力了。</p>
+<h2>创建分支</h2>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 查看所有分支  </span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git branch</span>
+
+<span class="token comment"># 新建test分支  </span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git branch test</span>
+
+<span class="token comment"># 切换到test分支  </span>
+<span class="token punctuation">[</span>root@god ~<span class="token punctuation">]</span><span class="token comment"># git switch test</span>
+</code></pre>
+<h1>使用GitHub</h1>
+<p>注册（略）。我们先创建一个公开仓库，比如<code>test</code>仓库，地址为：<code>https://github.com/your_name/test.git</code>。</p>
+<h2>将本地仓库上传到远程仓库</h2>
+<p>虽然我们已经在<code>GitHub</code>建立了仓库，但是<code>Git</code>并不知道，那么如何让<code>Git</code>知道我们有了一个远程仓库呢？这个时候就需要在<code>Git</code>中先添加远程仓库，命令格式为：<code>git remote add [shortname] [url]</code>。<code>shortname</code>就是别名。下面我们运行命令：</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token function">git</span> remote <span class="token function">add</span> <span class="token builtin class-name">test</span> https://github.com/Heart-King/test.git
+</code></pre>
+<p>运行后我们可以通过不加参数的<code>git remote</code>命令查看当前的远程库。现在，我们就可以把刚才已经建立的本地仓库文件，推送到远程仓库了。</p>
+<p>::: danger 注意
+需要记住的一点是，所谓的远程库，也仅仅是当前仓库的远程库！也就是说你在其他目录建立一个新的仓库后，它是没有这个远程库的，你需要另外添加。
+:::</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token function">git</span> push <span class="token builtin class-name">test</span> main
+</code></pre>
+<p><code>test</code>是远程仓库的名字，<code>main</code>是我们本地仓库的名字。</p>
+<blockquote>
+<p>这个时候会提示我们输入GitHub的账号和密码，按提示输入即可。</p>
+</blockquote>
+<p><code>test</code>是我们自己刚才取的，那这个<code>main</code>名字是哪里来的呢？其实这是系统默认给我们取的。可以使用如下命令查看：</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token function">git</span> branch
+</code></pre>
+<p>通常我们的主要分支名字默认都是叫<code>main</code>，如果我们要修改分支名字，我们输入以下命令给它重命名：</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token function">git</span> branch <span class="token parameter variable">-m</span> main adong
+</code></pre>
+<blockquote>
+<p>这里需要注意的一点就是：我们给分支修改名字后，再推送到远程仓库的时候，远程仓库也会创建一个新的叫<strong>adong</strong>的分支！！！</p>
+</blockquote>
+<h2>利用SSH通信</h2>
+<p>参考<a href="./ssh.md">SSH</a>，在本地生成密钥对。然后打开<code>Github</code>的账户设置，找到<code>SSH and GPG keys</code>，然后新建一个<code>SSH key</code>，将<code>公钥</code>内容直接粘贴进去就可以了。</p>
+<p>然后运行<code>ssh -T git@github.com</code>，如果返回<code>Hi XXXX! You've successfully authenticated...</code>说明配置成功。</p>
+<div class="markdown-alert markdown-alert-caution">
+<p class="markdown-alert-title">Caution</p>
+<p>此时需要使用ssh地址，而不是https地址。
+<code>git clone git@github.com:520Book/reponame.git</code></p>
+</div>
+<h3>Https和SSH的区别</h3>
+<p><code>Https</code>可以随意克隆<code>github</code>上的项目，而不管是谁的。而<code>SSH</code>则是你必须是你要克隆的项目的拥有者或管理员，且需要先添加<code>SSH key</code>，否则无法克隆。</p>
+<p><code>https url</code>在push的时候是需要验证用户名和密码的。而<code>SSH</code>在<code>push</code>的时候，是不需要输入用户名的，如果配置<code>SSH key</code>的时候设置了密码，则需要输入密码的，否则直接是不需要输入密码的。</p>
+<h1>关于<code>.gitignore</code>文件</h1>
+<p>刚才我们通过<code>git add</code>来将文件加入版本库，如果需要排除一些文件不加入怎么办？</p>
+<h3>语法规范</h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#</td>
+<td>#开头的行表示注释</td>
+</tr>
+<tr>
+<td>*</td>
+<td>用来匹配零个或多个字符</td>
+</tr>
+<tr>
+<td>*.a</td>
+<td>表示忽略.a文件</td>
+</tr>
+<tr>
+<td>*.[oa]</td>
+<td>表示忽略所有以.a和.o结尾的文件，*~忽略所有以~结尾的文件</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>用来匹配括号内的任一字符，如[abc]，也可以在括号内加连接符，如[0-9]匹配0至9的数；</td>
+</tr>
+<tr>
+<td>?</td>
+<td>用来匹配单个字符；</td>
+</tr>
+<tr>
+<td>!</td>
+<td>用来否定忽略。比如前面用了*.txt，然后使用!*a.txt，则这个a.txt不会被忽略</td>
+</tr>
+<tr>
+<td>/</td>
+<td>正斜杠在前：匹配项目跟目录；如/bin表示忽略根目录下的bin文件，/bsp表示忽略根目录下的bsp文件夹，但不忽略子目录里的user/bsp文件夹；正斜杠在后：匹配文件夹以及在该文件夹路径下的内容，但是不匹配该文件；如bsp/表示忽略bsp文件夹里的所有文件；</td>
+</tr>
+<tr>
+<td>**</td>
+<td>匹配多级目录，可在开始，中间，结束</td>
+</tr>
+</tbody>
+</table>
+<h3>.gitignore规则不生效</h3>
+<p><code>.gitignore</code>只能忽略那些原来没有被<code>track</code>的文件，如果某些文件已经被纳入了版本管理中，则修改<code>.gitignore</code>是无效的。解决方法就是先把本地缓存删除（改变成未track状态），然后再提交:</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> <span class="token function">rm</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">--cached</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"update .gitignore"</span>
+</code></pre>
+<h1>常用命令</h1>
+<h2>git branch</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 查看本地分支，加*标记的是当前分支</span>
+<span class="token function">git</span> branch
+
+<span class="token comment"># 列出远程分支</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-r</span>
+
+<span class="token comment"># 同时列出本地分支和远程分支</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-a</span>
+
+<span class="token comment"># 将本地master分支关联到远程origin/master分支，两种方法效果一样</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-u</span> origin/master master
+<span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/master master
+
+<span class="token comment"># 重命名分支，使用-M强制重命名。（默认是对当前分支进行操作。）</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-m</span> newName
+<span class="token function">git</span> branch <span class="token parameter variable">-M</span> newName
+
+<span class="token comment"># 删除分支，使用-D强制删除。</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-d</span> branchname
+
+<span class="token comment"># 删除远程分支</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-d</span> <span class="token parameter variable">-r</span> branchname
+</code></pre>
+<h2>git cherry-pick</h2>
+<p>cherry-pick可以用来复制提交，也就是说被cherry-pick的节点提交了什么，那么进行cherry-pick的节点也将会提交什么。</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> cherry-pick <span class="token parameter variable">--abort</span>
+</code></pre>
+<h2>git config</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 修改git init后默认的分支名</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> init.defaultBranch main
+
+<span class="token comment"># 设置用户名和邮箱</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"test"</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"test@gmail.com"</span>
+</code></pre>
+<h2>git checkout</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 切换分支</span>
+<span class="token function">git</span> checkout <span class="token operator">&lt;</span>branchname<span class="token operator">&gt;</span>
+</code></pre>
+<p>有的时候如果我们修改了文件，此时还没有任何<code>git</code>操作，如果希望撤销对文件的修改，回到上一次的状态，可以使用如下命令。</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 切换分支</span>
+<span class="token function">git</span> checkout -- filename
+</code></pre>
+<h2>git log</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 查看提交历史</span>
+<span class="token function">git</span> log
+
+<span class="token comment"># 比较2个分支的情况，比如查看main分支中有，而dev分支中没有的内容</span>
+<span class="token function">git</span> log main ^dev
+</code></pre>
+<h2>git merge</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 将分支合并到当前激活的分支，提交信息为Merge branch 'test'</span>
+<span class="token function">git</span> merge <span class="token operator">&lt;</span>branchname<span class="token operator">&gt;</span>
+
+<span class="token comment"># 加入test分支的提交信息</span>
+<span class="token function">git</span> merge <span class="token builtin class-name">test</span> --no-commit
+
+<span class="token comment"># 不加入test分支的提交信息</span>
+<span class="token function">git</span> merge <span class="token builtin class-name">test</span> <span class="token parameter variable">--squash</span>
+
+<span class="token comment"># 在合并CONFLICT后撤销操作</span>
+<span class="token function">git</span> merge <span class="token parameter variable">--abort</span>
+</code></pre>
+<h2>git pull</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 拉取远程分支</span>
+<span class="token function">git</span> pull
+</code></pre>
+<h2>git push</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 强制覆盖远程分支</span>
+<span class="token function">git</span> push <span class="token parameter variable">--force</span> origin <span class="token operator">&lt;</span>branchname<span class="token operator">&gt;</span>
+
+<span class="token comment"># 删除远程分支</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">--delete</span> <span class="token operator">&lt;</span>branchname<span class="token operator">&gt;</span>
+
+<span class="token comment"># 删除远程tag</span>
+<span class="token function">git</span> push origin :<span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span>
+</code></pre>
+<h2>git remote</h2>
+<h2>git rebase</h2>
+<p>以下命令用来修改版本的commit信息：</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> rebase <span class="token parameter variable">-i</span> HEAD~2
+<span class="token function">git</span> commit <span class="token parameter variable">--amend</span>
+
+<span class="token comment"># 完成rebase</span>
+<span class="token function">git</span> rebase <span class="token parameter variable">--continue</span>
+</code></pre>
+<h2>git rm</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 情况缓存。</span>
+<span class="token function">git</span> <span class="token function">rm</span> <span class="token parameter variable">-r</span> <span class="token parameter variable">--cached</span> <span class="token builtin class-name">.</span>
+</code></pre>
+<h2>git tag</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 列出全部tag（按字母排序的，和创建时间没关系）</span>
+<span class="token function">git</span> tag
+
+<span class="token comment"># 创建一个名为 v2.0 的标签</span>
+<span class="token function">git</span> tag v2.0
+
+<span class="token comment"># 查看指定tag</span>
+$ <span class="token function">git</span> tag <span class="token parameter variable">-l</span> <span class="token string">'v1.4*'</span>
+
+<span class="token comment"># 删除本地tag</span>
+<span class="token function">git</span> tag <span class="token parameter variable">-d</span> v1.0
+
+<span class="token comment"># 利用tag推送</span>
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> myDenoLib v0.1
+</code></pre>
+<h1>常见问题</h1>
+<h2>无法使用taskkill命令</h2>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token comment"># 参数需要使用双斜杠，其它命令类似</span>
+taskkill //PID <span class="token number">11542</span>
+</code></pre>
+<h2>文件夹下右键菜单不出现出现<code>Git Bash Here</code></h2>
+<p>这是由于安装时未勾选<code>Windows Explorer intergration</code>导致的。进入注册表<code>HKEY_CLASSES_ROOT\Directory\Background\shell</code>。在<code>shell</code>下新建项，命名<code>Git Bash Here</code>，然后在<code>Git Bash Here</code>新建字符串值，将名称设置为<code>Icon</code>，值为<code>D:\Program Files\Git\mingw64\share\git\git-for-windows.ico</code>，最后在<code>Git Bash Here</code>
+下新建项，名字为<code>Command</code>，将其默认值改成<code>D:\Program Files\Git\bin\bash.exe --login -i</code>。</p>
+<h2>关于回车符的问题</h2>
+<p>由于Windows平台使用<code>CR</code>+<code>LF</code>来结束一行，而<code>Mac</code>和
+<code>Linux</code>平台只使用<code>LF</code>来结束一行，可用以下命令关闭Git的警告提示。</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># 仅对当前git仓库有效</span>
+<span class="token function">git</span> config core.autocrlf <span class="token boolean">false</span>
+
+<span class="token comment"># 全局有效，不推荐</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> core.autocrlf <span class="token boolean">false</span>
+</code></pre>
+<h2>强制pull覆盖本地代码</h2>
+<pre class="language-shell" tabindex="0"><code class="language-shell"><span class="token function">git</span> fetch <span class="token parameter variable">--all</span>
+<span class="token comment"># origin为remote的名字</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> origin/master
+<span class="token function">git</span> pull
+</code></pre>
+<h2>无法push</h2>
+<p>明明<code>github</code>上有相对应的<code>repository</code>，但是<code>git push</code>就是不成功。</p>
+<pre class="language-shell" tabindex="0"><code class="language-shell">remote: Repository not found.
+fatal: repository <span class="token string">'https://github.com/XXX/xxx.git/'</span> not found
+</code></pre>
+<p>原因是有多个<code>git</code>的账号，在<code>push</code>之前登陆了另外一个。</p>
+<p>进入<code>控制面板</code>→<code>所有控制面板项</code>→<code>凭据管理器</code>，然后在<code>windows凭据</code>中删除<code>github</code>相关的凭证，重新验证一次就好了。</p>
+<h2>拒绝合并分支</h2>
+<p>如果提示<code>fatal:refusing to merge unrelated histories</code>，原因在于基于同一个仓库，做了两次完全不同的提交。比如一次提交是在<code>github</code>上直接创建文件并<code>commit</code>，而第二次是在本地还没有拉新代码的情况下修改了代码，并进行<code>pull -&gt; commit</code>
+和<code>push</code>。解决很简单，添加一个<code>--allow-unrelated-histories</code>参数即可：</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash">$ <span class="token function">git</span> pull <span class="token builtin class-name">test</span> main --allow-unrelated-histories
+</code></pre>
+<h2>关于主机授权</h2>
+<p>如果提示`The authenticity of host ...</p>
+<h1>评论</h1>
+            
+          </div>
+        </article>
+
+        <!-- comment by utteranc -->
+        <script src="https://utteranc.es/client.js" repo="iStudyMen/istudymen.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+        </script>
+
+        <nav class="page-pagination pagination my-5">
+          <ul>
+            <li class="pagination-prev">
+              <a href="/sword/curl/" rel="prev">
+                <span>上一篇：</span>
+                <strong>curl</strong>
+              </a>
+            </li>
+            
+            <li class="pagination-next">
+              <a href="/archive/npm/" rel="next">
+                <span>下一篇：</span>
+                <strong>npm</strong>
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </article>
+  </div>
+</div>
+
+
+
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-4 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewbox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">爱学习的好孩子</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500">活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">WebSites</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://dash.deno.com/login?redirect=/" title="Deno云官网" class="text-gray-600 hover:text-gray-800">Deno Deploy</a>
+            </li>
+            
+            <li>
+              <a href="https://github.com/" title="全球最大基友交流社区" class="text-gray-600 hover:text-gray-800">Github</a>
+            </li>
+            
+            <li>
+              <a href="https://supabase.com/" title="非常好的一款免费大象数据库" class="text-gray-600 hover:text-gray-800">Supabase</a>
+            </li>
+            
+            <li>
+              <a href="https://www.cpolar.com/" title="不错的内网穿透工具" class="text-gray-600 hover:text-gray-800">Cpolar</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">Docs</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://deno.com/" title="Deno官网" class="text-gray-600 hover:text-gray-800">Deno</a>
+            </li>
+            
+            <li>
+              <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" title="JavaScript最好的学习网站" class="text-gray-600 hover:text-gray-800">MDN</a>
+            </li>
+            
+            <li>
+              <a href="https://www.tslang.cn/docs/home.html" title="TypeScript学习网站" class="text-gray-600 hover:text-gray-800">TypeScript</a>
+            </li>
+            
+            <li>
+              <a href="https://lume.land/" title="本博客使用的库" class="text-gray-600 hover:text-gray-800">Lume</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">iPhone</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://sickw.com/" title="iPhone信息查询" class="text-gray-600 hover:text-gray-800">Sickw</a>
+            </li>
+            
+            <li>
+              <a href="https://www.att.com/deviceunlock/unlockstep1" title="ATT官方免费解锁" class="text-gray-600 hover:text-gray-800">ATT.com</a>
+            </li>
+            
+            <li>
+              <a href="http://iccid.online" title="最新的Iccid查询" class="text-gray-600 hover:text-gray-800">Iccid</a>
+            </li>
+            
+            <li>
+              <a href="https://tools.fun/" title="各类常用编码解码等工具" class="text-gray-600 hover:text-gray-800">Tools.fun</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-black text-gray-900 tracking-widest text-sm mb-3">Tools</h2>
+          <nav class="list-none mb-10">
+            
+            <li>
+              <a href="https://sms.sellaite.com/" title="免费接收国外验证码的平台" class="text-gray-600 hover:text-gray-800">SMS</a>
+            </li>
+            
+            <li>
+              <a href="https://mp3cut.net/cn/" title="音视频、PDF工具箱" class="text-gray-600 hover:text-gray-800">123APPS</a>
+            </li>
+            
+            <li>
+              <a href="https://convertio.co/zh/ocr/" title="文件格式转换" class="text-gray-600 hover:text-gray-800">Convertio</a>
+            </li>
+            
+            <li>
+              <a href="https://www.remove.bg/zh/" title="智能抠图网站" class="text-gray-600 hover:text-gray-800">Remove.Bg</a>
+            </li>
+            
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+    <div class="bg-gray-100">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-500 text-sm text-center sm:text-left">Copyright © 2018-2022 —
+          <a href="https://github.com/istudymen" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@ 大道至简</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewbox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body></html>
